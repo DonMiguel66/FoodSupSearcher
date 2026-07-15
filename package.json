@@ -1,0 +1,40 @@
+{
+  "name": "foodsup-searcher",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:pages": "vite build --config vite.pages.config.ts",
+    "build:function": "vite build --config vite.function.config.ts",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run typecheck && npm run build && npm run build:pages && npm run build:function && tsx --test tests/*.test.ts",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern dist-pages --ignore-pattern dist-function --ignore-pattern .next"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2",
+    "next": "16.2.10",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "tsx": "^4.20.6",
+    "typescript": "5.9.3",
+    "vite": "8.1.4"
+  },
+  "overrides": {
+    "postcss": "8.5.19"
+  },
+  "type": "module"
+}
